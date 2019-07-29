@@ -18,8 +18,9 @@ class Category
     private $slug;
     private $usd_value;
     private $eur_value;
+    private $seo_description;
 
-    public function __construct(string $name, bool $is_visible, DateTimeInterface $created_at, DateTimeInterface $updated_at, string $slug, int $parent_id = null, string $description = null, string $image = null, float $usd_value = null, float $eur_value = null)
+    public function __construct(string $name, bool $is_visible, DateTimeInterface $created_at, DateTimeInterface $updated_at, string $slug, int $parent_id = null, string $description = null, string $image = null, float $usd_value = null, float $eur_value = null, $seo_description = null)
     {
         $this->parent_id = $parent_id;
         $this->name = $name;
@@ -31,7 +32,7 @@ class Category
         $this->slug = $slug;
         $this->usd_value = $usd_value;
         $this->eur_value = $eur_value;
-
+        $this->seo_description = $seo_description;
     }
 
     public function getParentId(): ?int

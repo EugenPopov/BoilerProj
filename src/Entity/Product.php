@@ -127,6 +127,11 @@ class Product
     private $is_on_main;
 
     /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $seo_description;
+
+    /**
      * Product constructor.
      * @param $name
      * @param $description
@@ -142,7 +147,7 @@ class Product
      * @param null $is_on_main
      * @throws \Exception
      */
-    public function __construct($name = null, $description = null, $currency_name = null, $wholesale_price = null, $retail_price = null, $is_available = null, $is_visible = null, $special_offer = null, $product_unit = null, $brand = null, $sale = null, $is_on_main = null, $minimum_wholesale = null)
+    public function __construct($name = null, $description = null, $currency_name = null, $wholesale_price = null, $retail_price = null, $is_available = null, $is_visible = null, $special_offer = null, $product_unit = null, $brand = null, $sale = null, $is_on_main = null, $minimum_wholesale = null, $seo_description = null)
     {
         $this->name = $name;
         $this->description = $description;
@@ -164,6 +169,7 @@ class Product
         $this->sale = $sale;
         $this->is_on_main = $is_on_main;
         $this->minimum_wholesale = $minimum_wholesale;
+        $this->seo_description = $seo_description;
     }
 
     public function getId(): ?int
@@ -499,6 +505,18 @@ class Product
     public function setIsOnMain(bool $is_on_main): self
     {
         $this->is_on_main = $is_on_main;
+
+        return $this;
+    }
+
+    public function getSeoDescription(): ?string
+    {
+        return $this->seo_description;
+    }
+
+    public function setSeoDescription(?string $seo_description): self
+    {
+        $this->seo_description = $seo_description;
 
         return $this;
     }

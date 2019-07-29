@@ -55,6 +55,10 @@ class AddProductForm extends AbstractType
                     'class' => 'summernote',
                 ]
             ])
+            ->add('seo_description', TextType::class,[
+                'label' => 'SEO описание',
+                'required' => false,
+            ])
             ->add('category', ChoiceType::class,[
                 'choices' => $categories,
                 'choice_label' => 'name',

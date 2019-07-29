@@ -30,8 +30,9 @@ class Product
     private $specifications;
     private $category;
     private $id;
+    private $seo_description;
 
-    public function __construct(int $category_id, string $name, float $retail_price, DateTimeInterface $created_at, DateTimeInterface $updated_at, bool $is_available, bool $is_visible, bool $special_offer, string $slug, string $description = null, float $wholesale_price = null, int $minimum_wholesale = null, float $sale = null, float $product_value = null, string $product_unit = null, string $currency_name = null, $brand = null, $image = null, $id = null)
+    public function __construct(int $category_id, string $name, float $retail_price, DateTimeInterface $created_at, DateTimeInterface $updated_at, bool $is_available, bool $is_visible, bool $special_offer, string $slug, string $description = null, float $wholesale_price = null, int $minimum_wholesale = null, float $sale = null, float $product_value = null, string $product_unit = null, string $currency_name = null, $brand = null, $image = null, $id = null, $seo_description = null)
     {
         $this->category_id = $category_id;
         $this->name = $name;
@@ -52,6 +53,7 @@ class Product
         $this->brand = $brand;
         $this->image = $image;
         $this->id  = $id;
+        $this->seo_description = $seo_description;
     }
 
     /**
@@ -235,6 +237,24 @@ class Product
     {
         $this->retail_price = $retail_price;
     }
+
+    /**
+     * @return null
+     */
+    public function getSeoDescription()
+    {
+        return $this->seo_description;
+    }
+
+    /**
+     * @param null $seo_description
+     */
+    public function setSeoDescription($seo_description): void
+    {
+        $this->seo_description = $seo_description;
+    }
+
+    
 
 
 

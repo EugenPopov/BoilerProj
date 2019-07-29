@@ -25,6 +25,7 @@ class ProductController extends AbstractController
     public function index($slug, ProductRepository $productRepository, Request $request, ProductService $productService, CategoryService $categoryService, SessionInterface $session)
     {
         $product = $productRepository->findOneBy(['slug' => $slug]);
+        $category = $product->getCategory();
         $admin = false;
         if(empty($product))
             throw $this->createNotFoundException();
@@ -63,7 +64,7 @@ class ProductController extends AbstractController
         $amount = 0;
         if(isset($basket[$product->getId()]))
             $amount = $basket[$product->getId()];
-        $product = $productService->getProductPrice($product, null, $amount);
+        $product = $productService->getProductPriceWithSeo($product, $category,null, $amount);
         $viewed = json_decode($request->cookies->get('viewed_products'));
         if(empty($viewed))
             $viewed = [];

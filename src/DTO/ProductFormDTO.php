@@ -28,6 +28,7 @@ class ProductFormDTO
     private $specification;
     private $is_on_main;
     private $we_recommend;
+    private $seo_description;
 
     /**
      * ProductFormDTO constructor.
@@ -48,7 +49,7 @@ class ProductFormDTO
      * @param bool $is_on_main
      * @param null $we_recommend
      */
-    public function __construct($category = null, $name = null, $wholesale_price = null, $retail_price = null, $is_available = true, $is_visible = true, $special_offer = false, $minimum_wholesale = null, $product_unit = null, $currency_name = null, $brand = null, $specification = null, $sale = null, $description = null, $is_on_main = false, $we_recommend = null)
+    public function __construct($category = null, $name = null, $wholesale_price = null, $retail_price = null, $is_available = true, $is_visible = true, $special_offer = false, $minimum_wholesale = null, $product_unit = null, $currency_name = null, $brand = null, $specification = null, $sale = null, $description = null, $is_on_main = false, $we_recommend = null, $seo_description = null)
     {
         $this->category = $category;
         $this->name = $name;
@@ -66,6 +67,7 @@ class ProductFormDTO
         $this->description = $description;
         $this->is_on_main = $is_on_main;
         $this->we_recommend = $we_recommend;
+        $this->seo_description = $seo_description;
     }
 
 
@@ -420,6 +422,24 @@ class ProductFormDTO
     {
         $this->we_recommend = $we_recommend;
     }
+
+    /**
+     * @return null
+     */
+    public function getSeoDescription()
+    {
+        return $this->seo_description;
+    }
+
+    /**
+     * @param null $seo_description
+     */
+    public function setSeoDescription($seo_description): void
+    {
+        $this->seo_description = $seo_description;
+    }
+
+
 
 
 

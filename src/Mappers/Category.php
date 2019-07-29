@@ -30,7 +30,10 @@ class Category
             $entity->getDescription(),
             $entity->getUsdValue(),
             $entity->getEurValue(),
-            $entity->getIsVisible()
+            $entity->getIsVisible(),
+            null,
+            $entity->getSeoDescription()
+
         );
     }
 }

@@ -12,6 +12,7 @@ class CategoryForm
     private $usd;
     private $eur;
     private $is_visible;
+    private $seo_description;
 
     /**
      * CategoryForm constructor.
@@ -22,7 +23,7 @@ class CategoryForm
      * @param $is_visible
      * @param $image
      */
-    public function __construct($name = null, $description = null, $usd = null, $eur = null, $is_visible = null, $image = null)
+    public function __construct($name = null, $description = null, $usd = null, $eur = null, $is_visible = null, $image = null, $seo_description = null)
     {
         $this->name = $name;
         $this->description = $description;
@@ -30,6 +31,7 @@ class CategoryForm
         $this->usd = $usd;
         $this->eur = $eur;
         $this->is_visible = $is_visible;
+        $this->seo_description = $seo_description;
     }
 
 
@@ -138,6 +140,24 @@ class CategoryForm
     {
         $this->is_visible = $is_visible;
     }
+
+    /**
+     * @return null
+     */
+    public function getSeoDescription()
+    {
+        return $this->seo_description;
+    }
+
+    /**
+     * @param null $seo_description
+     */
+    public function setSeoDescription($seo_description): void
+    {
+        $this->seo_description = $seo_description;
+    }
+
+
 
 
 

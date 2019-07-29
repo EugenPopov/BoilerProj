@@ -52,6 +52,23 @@ class ProductService
         }
     }
 
+    public function getProductPriceWithSeo(Product $product, Category $category, $spec = null, int $amount = null)
+    {
+        $product = $this->getProductPrice($product, $spec, $amount);
+        if(empty($product->getSeoDescription())){
+            while (!empty($category->getParent()) && empty($category->getSeoDescription())){
+                $category = $category->getParent();
+            }
+            if(empty($category->getSeoDescription()))
+                $product->setSeoDescription($product->getDescription());
+            else
+                $product->setSeoDescription($category->getSeoDescription());
+
+        }
+
+        return $product;
+    }
+
     public function getProductPrice(Product $product, $spec = null, int $amount = null): \App\DTO\Product
     {
         $currency = $product->getCurrencyName();

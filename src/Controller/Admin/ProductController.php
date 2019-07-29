@@ -201,7 +201,8 @@ class ProductController extends AbstractController
                 ->setCurrencyName($data->getCurrencyName())
                 ->setBrand($data->getBrand())
                 ->setMinimumWholesale($data->getMinimumWholesale())
-                ->setIsOnMain($data->getIsOnMain());
+                ->setIsOnMain($data->getIsOnMain())
+                ->setSeoDescription($data->getSeoDescription());
 
             $recom = $product->getRecommendProduct();
             foreach ($recom as $item) {

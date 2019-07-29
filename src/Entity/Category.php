@@ -81,6 +81,11 @@ class Category
      */
     private $eur_value;
 
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $seo_description;
+
     public function __construct()
     {
         $this->created_at = new DateTime();
@@ -279,6 +284,18 @@ class Category
     public function setEurValue(?float $eur_value): self
     {
         $this->eur_value = $eur_value;
+
+        return $this;
+    }
+
+    public function getSeoDescription(): ?string
+    {
+        return $this->seo_description;
+    }
+
+    public function setSeoDescription(?string $seo_description): self
+    {
+        $this->seo_description = $seo_description;
 
         return $this;
     }

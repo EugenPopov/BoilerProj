@@ -32,6 +32,10 @@ class AddCategoryForm extends AbstractType
                     'class' => 'summernote',
                 ]
             ])
+            ->add('seo_description', TextType::class, [
+                'label' => 'SEO описание',
+                'required' => false
+            ])
             ->add('image', FileType::class,[
                 'label' => 'Изображение',
                 'required' => false,

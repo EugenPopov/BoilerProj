@@ -44,7 +44,8 @@ class Product
             $entity->getCurrencyName(),
             $entity->getBrand(),
             $entity->getImages(),
-            $entity->getId()
+            $entity->getId(),
+            $entity->getSeoDescription()
         );
 
         if(!empty($spec)){
@@ -73,7 +74,8 @@ class Product
             $formDTO->getBrand(),
             $formDTO->getSale(),
             $formDTO->getIsOnMain(),
-            $formDTO->getMinimumWholesale()
+            $formDTO->getMinimumWholesale(),
+            $formDTO->getSeoDescription()
         );
     }
 
