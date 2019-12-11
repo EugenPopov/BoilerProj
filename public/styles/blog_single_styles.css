@@ -532,9 +532,9 @@ section
 .basket_count
 {
 	position: absolute;
-	font-size: large;
-	right: -10px;
-	top: 35px;
+	font-size: medium;
+	right: -7px;
+	top: 40px;
 }
 .header_search_results
 {

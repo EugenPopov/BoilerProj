@@ -1015,9 +1015,13 @@ select option
 .basket_count
 {
 	position: absolute;
-	font-size: large;
-	right: -10px;
-	top: 35px;
+	font-size: medium;
+	right: -5px;
+	top: 40px;
+}
+
+#basket i {
+	font-size: 1.2em
 }
 .main_nav_dropdown li
 {

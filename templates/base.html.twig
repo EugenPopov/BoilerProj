@@ -65,9 +65,15 @@
                 </div>
                 <div class="col-lg-4 col-sm-9 order-lg-3 order-2 text-right">
                     <div class="logo_container">
-                        <div class="logo" id="basket"><a href="{{ path('basket_view') }}"><i class="fas fa-shopping-cart text-primary fa-2x"></i></a></div>
+                        <div class="logo" id="basket">
+                            <a href="{{ path('basket_view') }}">
+                                <i class="fas fa-shopping-cart text-primary"></i>
+                            </a>
+                        </div>
                         <a  id="resp_logo" style="display:none;	font-size: 50px;font-family: 'Orbitron', sans-serif;" href="{{ path('index') }}">Mavok</a>
-                        <a class="d-none" id="resp_basket" href="{{ path('basket_view') }}"><i class="fas fa-shopping-cart text-primary fa-2x"></i></a>
+                        <a class="d-none" id="resp_basket" href="{{ path('basket_view') }}">
+                            <i class="fas fa-shopping-cart text-primary fa-2x"></i>
+                        </a>
                         <span class="basket_count badge badge-pill badge-danger notify" id="basket-product-amount"></span>
                     </div>
                 </div>

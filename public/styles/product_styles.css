@@ -534,9 +534,12 @@ section
 .basket_count
 {
 	position: absolute;
-	font-size: large;
-	right: -10px;
-	top: 35px;
+	font-size: medium;
+	right: -12px;
+	top: 40px;
+}
+#basket i {
+	font-size: 1.2em
 }
 .header_search_results
 {
@@ -1623,13 +1626,7 @@ select option
 	background: #999999;
 	border-radius: 50%;
 }
-.basket_count
-{
-	position: absolute;
-	font-size: large;
-	right: -10px;
-	top: 35px;
-}
+
 .product_color > li
 {
 	position: relative;
