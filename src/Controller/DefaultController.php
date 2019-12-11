@@ -271,7 +271,7 @@ class DefaultController extends AbstractController
         }
         $email = $commonInfoService->getParameter('mail');
         $phone = $commonInfoService->getParameter('phone_number');
-        $mail = new Swift_Message('Вы оформили заказ на сайте Mavok!');
+        $mail = new Swift_Message('Вы оформили заказ на сайте trubaTeplo!');
         $mail->setFrom('dzhezik@gmail.com')
             ->setTo('zhenya1995q@gmail.com')
             ->setBody(

@@ -64,7 +64,7 @@
 @media only screen and (max-width: 1199px)
 {
 	.logo a {
-		font-size: 40px;
+		font-size: 25px;
 	}
 	.cat_menu_container
 	{
@@ -517,7 +517,7 @@
 	}
 	.logo_container, .wishlist_cart
 	{
-		height: 72px;
+		height: auto;
 	}
 	.logo a
 	{
@@ -949,6 +949,18 @@
 {
 	#resp_basket {
 		padding-left: 3rem;
+	}
+}
+
+@media (max-width: 380px) {
+	#resp_logo {
+		font-size: 35px!important;
+	}
+}
+
+@media (max-width: 340px) {
+	#resp_logo {
+		font-size: 30px!important;
 	}
 }
 

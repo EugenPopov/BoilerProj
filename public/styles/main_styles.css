@@ -3611,9 +3611,13 @@ select option
 {
 	color: #000000;
 }
+
+#basket a {
+	font-size: 50px;
+}
 .logo a
 {
-    font-size: 50px;
+    font-size: 30px;
     font-family: 'Orbitron', sans-serif;
 }
 .footer_title

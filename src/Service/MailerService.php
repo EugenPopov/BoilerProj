@@ -49,7 +49,7 @@ class MailerService
             }
         }
 
-        $mail = new Swift_Message('Вы оформили заказ на сайте Mavok!');
+        $mail = new Swift_Message('Вы оформили заказ на сайте trubaTeplo!');
         $mail->setFrom('dzhezik@gmail.com')
             ->setTo('dzhezik@gmail.com ')
             ->setBody(
